@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import classes from './Post.module.css'
 import { PostDTO } from './types/dto'
 
@@ -6,17 +7,23 @@ interface IPostProps {
 }
 
 const Post = ({ post }: IPostProps) => {
-  const handleClick = (id: number) => {
-    alert(`clicked ${id}`)
+  const [showMsg, setShowMsg] = useState<boolean>(false)
+
+  const toggleShow = () => {
+    setShowMsg(!showMsg)
   }
 
   return (
-    <div onClick={() => handleClick(post.id)} className={classes.post}>
-      <p>id: {post.id}</p>
-      <p>postedBy: {post.userId}</p>
-      <p>title: {post.title}</p>
-      <p>body: {post.body}</p>
-    </div>
+    <>
+      <div className={classes.post}>
+        <p>id: {post.id}</p>
+        <p>postedBy: {post.userId}</p>
+        <p>title: {post.title}</p>
+        <p>body: {post.body}</p>
+        {showMsg && <p>more post info</p>}
+        <button onClick={toggleShow}>{showMsg ? 'Show Less' : 'Show More'}</button>
+      </div>
+    </>
   )
 }
 export default Post
