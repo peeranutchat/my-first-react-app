@@ -18,7 +18,7 @@ const Greeting = ({ name, isLoggedIn }: IGreetingProps) => {
         <h3>{greetingMsg}</h3>
         <p>{isLoggedIn ? name : 'Unknown'}</p>
       </div>
-      <button onClick={handleClick}>change greeting message</button>
+      <button onClick={handleClick}>Change Greeting Message</button>
     </>
   )
 }
