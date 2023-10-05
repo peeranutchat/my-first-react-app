@@ -1,12 +1,25 @@
-import navStlye from './Navbar.module.css'
+import classes from './Navbar.module.css'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className={navStlye.navbar}>
-      <h3>NavBar</h3>
-      <button className={navStlye.login}>Login</button>
-    </div>
+    <nav className={classes.navbar}>
+      <div className={classes.menu}>
+        <h3>Navbar</h3>
+        <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/">
+          Feed
+        </NavLink>
+      </div>
+      <div className={classes.menu}>
+        <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/profile">
+          Profile
+        </NavLink>
+        <NavLink className={({ isActive }) => (isActive ? classes.active : classes.inactive)} to="/create">
+          Create
+        </NavLink>
+        <button className={classes.login}>Login</button>
+      </div>
+    </nav>
   )
 }
-
 export default Navbar
