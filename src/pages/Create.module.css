@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.postForm {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  height: auto;
+  background-color: white;
+  padding: 10px 8px;
+  border-radius: 6px;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.createSummit {
+  background-color: cecec2;
+  color: blue;
+  padding: 5px 5px;
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+.postDetail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 800px;
+  height: auto;
+  padding: 50px 14px;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 0.1);
+
+  background-color: cecec2;
+  border-radius: 10px;
+  gap: 25px;
+}
