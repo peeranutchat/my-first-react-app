@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PostDTO } from './types/dto'
+import { PostDTO } from '../types/dto'
 import classes from './Post.module.css'
 import { Link } from 'react-router-dom'
 
