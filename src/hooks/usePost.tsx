@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { PostDTO } from '../components/types/dto'
+import { PostDTO } from '../types/dto'
 
 const usePost = (id: string) => {
   const [posts, setPosts] = useState<PostDTO | null>(null)
